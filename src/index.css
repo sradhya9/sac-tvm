@@ -242,5 +242,27 @@ a:hover {
 @media (min-width: 1024px) {
   .grid-responsive-3 {
     gap: 40px;
-  }
+}
+}
+
+/* =========================================================================
+   Custom Scrollbar
+   ========================================================================= */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--surface);
+  border-left: 3px solid var(--dark);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border: 3px solid var(--dark);
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--accent);
 }

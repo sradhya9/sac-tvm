@@ -27,6 +27,10 @@ const Register = () => {
     setTicketId(`TCK-${Math.floor(Math.random() * 90000) + 10000}`);
   }, []);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [step]);
+
   const handleNext = (e) => {
     e.preventDefault();
     setStep(step + 1);
