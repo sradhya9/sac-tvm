@@ -1,8 +1,8 @@
-# National Tech Symposium 2026 🚀
+# National Tech Symposium 2026 
 
 A modern, neo-brutalist web application built for managing registrations, ticketing, and live metrics for a large-scale tech symposium. Built with React and Firebase.
 
-## 🌟 Features
+## Features
 
 - **Neo-Brutalist UI**: A vibrant, engaging, and high-contrast user interface designed to stand out.
 - **Participant Registration**: Seamless multi-step registration flow where users can select tracks, enter details, and receive a digital ticket with a generated QR code.
@@ -11,7 +11,7 @@ A modern, neo-brutalist web application built for managing registrations, ticket
 - **Organizer Dashboard**: A real-time, live-updating admin dashboard to track total registrations, college participation, check-ins, and track-specific metrics.
 - **Role-Based Access Control**: Strict routing and database rules ensuring only the admin (`admin@symposium.com`) can access the organizer dashboard.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Frontend Framework**: [React 18](https://react.dev/) powered by [Vite](https://vitejs.dev/)
 - **Routing**: React Router DOM v6
@@ -20,7 +20,7 @@ A modern, neo-brutalist web application built for managing registrations, ticket
 - **Backend/Database**: [Firebase Firestore](https://firebase.google.com/docs/firestore)
 - **Authentication**: [Firebase Auth](https://firebase.google.com/docs/auth)
 
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
 
@@ -80,7 +80,7 @@ npm run dev
 
 Your app will now be running on `http://localhost:5173`.
 
-## 📦 Deployment
+##Deployment
 
 This project includes a `vercel.json` file configured for SPA routing. You can deploy it seamlessly to [Vercel](https://vercel.com/) with zero configuration.
 
@@ -89,7 +89,7 @@ npm install -g vercel
 vercel
 ```
 
-## 🔒 Security
+## Security
 
 Ensure you have proper Firestore Security Rules in place before going to production to protect participant data. A basic `firestore.rules` file is included in the project root.
 
