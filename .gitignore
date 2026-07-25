@@ -25,4 +25,4 @@ dist-ssr
 
 # Firebase config (contains API keys)
 src/config/firebase.js
-firestore.rules
+.firestore.rules
