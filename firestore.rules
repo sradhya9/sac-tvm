@@ -1,0 +1,19 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Rules for the registrations collection
+    match /registrations/{document=**} {
+      
+      // Allow ANYONE to create a new registration (so users can sign up)
+      allow create: if true;
+      
+      // Allow ANYONE to read the registrations for now (so your dashboard works without login)
+      // SECURITY WARNING: In a production app, you should change this to require admin authentication
+      allow read: if true; 
+      
+      // Prevent users from modifying or deleting existing registrations
+      allow update, delete: if false;
+    }
+  }
+}

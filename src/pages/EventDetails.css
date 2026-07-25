@@ -1,0 +1,247 @@
+.event-details-layout {
+  display: flex;
+  gap: 48px;
+}
+
+.event-main {
+  flex: 1;
+}
+
+.event-hero {
+  border-radius: var(--radius-lg);
+  padding: 64px 48px;
+  position: relative;
+  margin-bottom: 48px;
+  border: var(--border-thick);
+  box-shadow: 8px 8px 0 var(--dark);
+}
+
+.event-hero h1 {
+  font-size: 48px;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  font-weight: 900;
+  line-height: 1.1;
+}
+
+.event-org {
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.event-section {
+  margin-bottom: 48px;
+  color: var(--white);
+}
+
+.event-section h2 {
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.event-section .description {
+  font-size: 18px;
+  line-height: 1.8;
+  opacity: 0.9;
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 24px;
+}
+
+.info-box {
+  background-color: var(--dark);
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+  padding: 24px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.icon-accent {
+  color: var(--accent);
+}
+
+.booking-sidebar {
+  width: 400px;
+  flex-shrink: 0;
+}
+
+.booking-card {
+  background-color: var(--white);
+  color: var(--dark);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  border: var(--border-thick);
+  box-shadow: 8px 8px 0 var(--accent);
+  position: sticky;
+  top: 120px;
+}
+
+.booking-card h3 {
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.ticket-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.ticket-option {
+  border: 2px solid var(--border);
+  border-radius: var(--radius-sm);
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ticket-option:hover:not(.sold-out):not(.selected) {
+  border-color: var(--primary);
+  background-color: var(--surface);
+}
+
+.ticket-option.selected {
+  background-color: var(--dark);
+  color: var(--white);
+  border-color: var(--dark);
+}
+
+.ticket-option.selected input[type="radio"] {
+  accent-color: var(--accent);
+}
+
+.ticket-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 700;
+}
+
+.ticket-price {
+  font-weight: 800;
+  font-family: var(--font-display);
+}
+
+.ticket-option.sold-out {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: #f0f0f0;
+}
+
+.sold-out-badge {
+  background-color: var(--dark);
+  color: var(--white);
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.booking-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  border-top: 2px solid var(--border);
+  padding-top: 24px;
+}
+
+.qty-selector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 700;
+}
+
+.qty-controls {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.qty-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  color: var(--dark);
+  border: 2px solid var(--dark);
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover:not(:disabled) {
+  background-color: var(--dark);
+  color: var(--white);
+}
+
+.qty-btn:active:not(:disabled) {
+  transform: scale(0.9);
+}
+
+.qty-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  border-color: var(--border);
+}
+
+.qty-value {
+  width: 32px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 20px;
+  font-family: var(--font-display);
+}
+
+.btn-large {
+  width: 100%;
+  padding: 16px;
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.secure-checkout {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 16px;
+  font-size: 12px;
+  opacity: 0.6;
+}
+
+@media (max-width: 1024px) {
+  .event-details-layout {
+    flex-direction: column;
+  }
+  .booking-sidebar {
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 767px) {
+  .event-hero {
+    padding: 40px 24px;
+  }
+  .event-hero h1 {
+    font-size: 32px;
+  }
+  .event-section h2 {
+    font-size: 24px;
+  }
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+}

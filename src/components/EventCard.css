@@ -1,0 +1,203 @@
+.event-card {
+  position: relative;
+  border-radius: 32px;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 250px;
+  margin-top: 16px; /* Space for the floating badge */
+  transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease;
+  font-family: var(--font-body);
+}
+
+.event-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: var(--shadow-hover);
+  z-index: 10;
+}
+
+.floating-badge {
+  position: absolute;
+  top: -16px;
+  right: 24px;
+  padding: 6px 20px;
+  border-radius: 24px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.event-content h3 {
+  font-family: var(--font-display);
+  font-size: 24px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.event-content p {
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.9;
+  margin-bottom: 24px;
+}
+
+.btn-book-pill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  padding: 4px 4px 4px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 14px;
+  gap: 12px;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.btn-book-pill span {
+  position: relative;
+  z-index: 2;
+  transition: color 0.4s ease;
+}
+
+.btn-book-pill::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-101%);
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+  z-index: -1;
+  border-radius: 30px;
+}
+
+.event-card:hover .btn-book-pill {
+  transform: translateX(4px);
+}
+
+.event-card:hover .btn-book-pill::before {
+  transform: translateX(0);
+}
+
+.icon-circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  color: var(--dark);
+  transition: transform 0.3s ease, background-color 0.4s ease, color 0.4s ease;
+  position: relative;
+  z-index: 2;
+}
+
+.event-card:hover .icon-circle {
+  transform: scale(1.1);
+}
+
+.floating-badge {
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.event-card:hover .floating-badge {
+  transform: rotate(5deg) scale(1.05);
+}
+
+/* Theme 0: Light */
+.card-light {
+  background-color: #F0F0F0;
+  color: var(--dark);
+}
+.card-light .floating-badge {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.card-light .btn-book-pill {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.card-light .btn-book-pill::before {
+  background-color: var(--dark);
+}
+.card-light:hover .btn-book-pill span {
+  color: var(--white);
+}
+
+/* Theme 1: Lime */
+.card-lime {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+.card-lime .floating-badge {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.card-lime .btn-book-pill {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.card-lime .btn-book-pill::before {
+  background-color: var(--white);
+}
+.card-lime:hover .btn-book-pill span {
+  color: var(--dark);
+}
+
+/* Theme 2: Blue */
+.card-blue {
+  background-color: var(--primary);
+  color: var(--white);
+}
+.card-blue .floating-badge {
+  background-color: var(--white);
+  color: var(--dark);
+}
+.card-blue .btn-book-pill {
+  background-color: var(--white);
+  color: var(--dark);
+}
+.card-blue .btn-book-pill .icon-circle {
+  background-color: var(--dark);
+  color: var(--white);
+}
+.card-blue .btn-book-pill::before {
+  background-color: var(--dark);
+}
+.card-blue:hover .btn-book-pill span {
+  color: var(--white);
+}
+.card-blue:hover .btn-book-pill .icon-circle {
+  background-color: var(--white);
+  color: var(--dark);
+}
+
+/* Theme 3: Dark */
+.card-dark {
+  background-color: var(--dark);
+  color: var(--white);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+.card-dark .floating-badge {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+.card-dark .btn-book-pill {
+  background-color: var(--accent);
+  color: var(--dark);
+}
+.card-dark .btn-book-pill::before {
+  background-color: var(--white);
+}
+.card-dark:hover .btn-book-pill span {
+  color: var(--dark);
+}
