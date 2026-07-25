@@ -106,6 +106,7 @@
 .mobile-menu {
   display: none;
   cursor: pointer;
+  color: var(--dark);
 }
 
 /* Scroll Effect */

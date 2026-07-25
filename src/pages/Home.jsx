@@ -184,11 +184,11 @@ const Home = () => {
         {/* Tracks Section */}
         <ScrollReveal animation="fade-up" delay={200}>
           <div style={{ marginTop: '100px' }}>
-            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', marginBottom: '40px' }}>
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', flexWrap: 'wrap', gap: '24px', marginBottom: '40px' }}>
               <div>
                 <h2 className="text-h1" style={{ textTransform: 'uppercase', lineHeight: 1 }}>Tracks &<br/>Workshops</h2>
               </div>
-              <Link to="/tracks" className="btn-secondary" style={{ padding: '12px 24px', borderRadius: '24px', border: '3px solid var(--dark)', fontWeight: 'bold' }}>View All Tracks</Link>
+              <Link to="/tracks" className="btn-secondary" style={{ padding: '12px 24px', borderRadius: '24px', border: '3px solid var(--dark)', fontWeight: 'bold', whiteSpace: 'nowrap' }}>View All Tracks</Link>
             </div>
             
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
