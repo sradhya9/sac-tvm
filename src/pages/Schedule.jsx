@@ -1,5 +1,6 @@
 import ScrollReveal from '../components/ScrollReveal';
 import { schedule } from '../utils/mockData';
+import { MapPin } from 'lucide-react';
 import './Pages.css';
 
 const Schedule = () => {
@@ -52,7 +53,7 @@ const Schedule = () => {
                     </div>
                     <div style={{ flexGrow: 1 }}>
                       <h3 className="text-h4" style={{ margin: '0 0 8px 0' }}>{event.title}</h3>
-                      <div style={{ opacity: 0.7, fontWeight: 'bold' }}>📍 {event.location}</div>
+                      <div style={{ opacity: 0.7, fontWeight: 'bold', display: 'flex', alignItems: 'center', gap: '6px' }}><MapPin size={18} /> {event.location}</div>
                     </div>
                   </div>
                 ))}
